@@ -15,6 +15,6 @@ jobs:
       - name: Pull nginx
         run: docker pull nginx:latest 
       - name: Renaming nginx Image name
-        run: docker tag nginx:latest ${{ vars.DOCKER_USERNAME }}
+        run: docker tag nginx:latest ${{ vars.DOCKER_USERNAME }}/custom-nginx:latest
       - name: Push Latest image intlo Docker hub
-        run: docker push ${{ vars.DOCKER_USERNAME }}
+        run: docker push ${{ vars.DOCKER_USERNAME }}/custom-nginx:latest
