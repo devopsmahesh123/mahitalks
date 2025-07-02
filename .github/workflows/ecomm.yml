@@ -13,5 +13,5 @@ jobs:
       - name: location
         run: pwd
       - name: Copy code to Ngnix folder
-        run: sudo cp -rf /ecomm/* /var/www.html/
+        run: sudo cp -rf ~/actions-runner/_work/mahitalks/mahitalks/ecomm/* /var/www.html/
   
