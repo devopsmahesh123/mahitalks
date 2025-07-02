@@ -5,7 +5,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: install Ngnix
-        run: sudo apt install ngnix -y
+        run: sudo apt install nginx -y
       - name: remove default page
         run: sudo rm -rf /var/www/html/*
       - name: Clone the code
