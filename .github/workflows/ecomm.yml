@@ -1,0 +1,17 @@
+name: ecomm deployment
+on: workflow_dispatch
+jobs: 
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: install Ngnix
+        run: sudo apt install ngnix -y
+      - name: remove default page
+        run: sudo rm -rf /var/www/html/*
+      - name: Clone the code
+        run: git clone https://github.com/muralialakuntla3/ecomm.git
+      - name: location
+        run: pwd
+      - name: Copy code to Ngnix folder
+        run: sudo cp -rf /ecomm/* /var/www.html/
+  
