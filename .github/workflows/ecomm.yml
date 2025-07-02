@@ -8,8 +8,10 @@ jobs:
         run: sudo apt install nginx -y
       - name: remove default page
         run: sudo rm -rf /var/www/html/*
-      - name: Clone the code
-        run: git clone https://github.com/muralialakuntla3/ecomm.git
+      - name: Remove existing folder and clone repo
+        run: |
+          rm -rf ecomm
+          git clone https://github.com/muralialakuntla3/ecomm.git
       - name: location
         run: pwd
       - name: Copy code to Ngnix folder
